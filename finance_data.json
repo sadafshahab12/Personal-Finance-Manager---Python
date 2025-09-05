@@ -1,11 +1,13 @@
 {
   "income": [
     { "category": "salary", "amount": 10000.0 },
-    { "category": "freelancing", "amount": 50000.0 }
+    { "category": "freelancing", "amount": 50000.0 },
+    { "category": "account  desposit", "amount": 3000.0 }
   ],
   "expense": [
     { "category": "bag", "amount": 500.0 },
     { "category": "vegetable", "amount": 1000.0 },
-    { "category": "domain purchase", "amount": 2000.0 }
+    { "category": "domain purchase", "amount": 2000.0 },
+    { "category": "cat ", "amount": 300.0 }
   ]
 }

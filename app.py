@@ -1,9 +1,22 @@
 import json
 import tkinter as tk
 from collections import defaultdict
+import matplotlib.pyplot as plt
 
 income = []
 expense = []
+
+
+def show_expense_pie():
+    expense_cat = defaultdict(float)
+    for item in expense:
+        expense_cat[item["category"]] += item["amount"]
+
+    labels = list(expense_cat.keys())
+    sizes = list(expense_cat.values())
+    plt.pie(sizes, labels=labels, autopct="%1.1f%%")
+    plt.title("Expense Distribution by Category")
+    plt.show()
 
 
 def load_data():
@@ -106,7 +119,7 @@ tk.Button(frame_buttons, text="Show Summary", command=show_summary_ui).pack(
     side=tk.LEFT, padx=5
 )
 
-
+tk.Button(root, text="Show Expense Pie Chart", command=show_expense_pie).pack(pady=5)
 # while True:
 #     choice = input(
 #         "Add Income (i) / Add Expense (e) /Show Summary (ss) / Quit (q): "
